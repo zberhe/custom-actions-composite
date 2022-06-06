@@ -12,7 +12,7 @@ description: 'Greet world'
 runs:
   using: "composite"
   steps:
-#     - run: chmod +x bye.sh
-#       shell: bash
+    - run: sudo chmod +x bye.sh
+      shell: bash
     - run: bye.sh
       shell: bash
