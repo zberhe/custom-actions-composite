@@ -19,7 +19,7 @@ runs:
 #       shell: bash
 #     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
 #       shell: bash 
-    - run: chmod +x helloworld.sh
+    - run: chmod +x bye.sh
       shell: bash
-    - run: helloworld.sh
+    - run: bye.sh
       shell: bash
