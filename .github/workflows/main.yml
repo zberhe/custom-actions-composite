@@ -1,13 +1,19 @@
-name: Trigger Site Rebuild on a CRON Schedule
-
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/2 * * * *'
+
+
+#   workflow_dispatch:
+
 jobs:
-  build:
-    name: Trigger Site Rebuild
+  hello_world_job:
     runs-on: ubuntu-latest
+    name: A job to say hello
     steps:
-      - name: cURL request
-        # Hit the webhook endpoint to rebuild  from the "main" branch
-        run: curl -X POST -d {} https://<webhook-endpoint-url>
+      - uses: actions/checkout@v3
+      - id: foo
+        uses: ./
+#         with:
+#           who-to-greet: 'Mona the Octocat'
+#       - run: echo random-number ${{ steps.foo.outputs.random-number }}
+#         shell: bash
