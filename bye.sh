@@ -1,1 +1,2 @@
 echo "bye"
+echo 'hi'
