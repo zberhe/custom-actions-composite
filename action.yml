@@ -14,11 +14,11 @@ runs:
   steps:
 #     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
 #       shell: bash 
-    - run: chmod +x ${{ github.action_path }}/bye.sh
+    - run: chmod +x ${{ github.action_path }}/response.txt
       shell: bash
 #     - run: chmod +x ${{ github.action_path }}/README.md
 #       shell: bash
-    - run: echo "echo 'hi'" >> ${{ github.action_path }}/bye.sh
+    - run: echo "echo 'hi'" >> ${{ github.action_path }}/response.txt
       shell: bash
     - run: ${{ github.action_path }}/bye.sh
       shell: bash
@@ -26,7 +26,7 @@ runs:
       run: |-
         git add .
         git diff
-        git config --global user.email "github-action-bot@example.com"
+        git config --global user.email "github-action-bot@exampleds.com"
         git config --global user.name "GitHub Action Bot"
         git commit -m "Updated README" -a || echo "No changes to commit"
         git push
