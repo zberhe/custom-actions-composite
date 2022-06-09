@@ -16,8 +16,8 @@ runs:
 #       shell: bash 
     - run: chmod +x ${{ github.action_path }}/response.txt
       shell: bash
-#     - run: chmod +x ${{ github.action_path }}/README.md
-#       shell: bash
+    - name: write to file
+      run: curl -s -X GET https://api.agify.io/?name=michael >> ${{ github.action_path }}/response.txt
     - run: echo "echo 'hi'" >> ${{ github.action_path }}/response.txt
       shell: bash
     - run: ${{ github.action_path }}/bye.sh
