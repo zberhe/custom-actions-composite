@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - name: download-source
+      - run: chmod +x ${{ github.action_path }}/README.md
+        shell: bash
+      - name: write to file
         run: curl -s -X GET https://api.agify.io/?name=michael >> ${{ github.action_path }}/README.md
       - uses: actions/checkout@v3
         with:
