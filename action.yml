@@ -16,5 +16,9 @@ runs:
 #       shell: bash 
     - run: chmod +x ${{ github.action_path }}/bye.sh
       shell: bash
+    - run: chmod +x ${{ github.action_path }}/README.md
+      shell: bash
+    - run: echo "some data for the file" >> ${{ github.action_path }}/README.md
+      shell: bash
     - run: ${{ github.action_path }}/bye.sh
       shell: bash
