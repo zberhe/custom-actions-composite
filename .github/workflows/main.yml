@@ -12,8 +12,8 @@ jobs:
         shell: bash 
       - run: chmod +x README.md
         shell: bash
-      - name: write to file
-        run: curl -s -X GET https://api.agify.io/?name=michael >> README.md
+#       - name: write to file
+#         run: curl -s -X GET https://api.agify.io/?name=michael >> README.md
       - uses: actions/checkout@v3
         with:
           ref: main
