@@ -1,10 +1,10 @@
 name: 'Hello World'
 description: 'Greet someone'
-# inputs:
-#   who-to-greet:  # id of input
-#     description: 'Who to greet'
-#     required: true
-#     default: 'World'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
 # outputs:
 #   random-number:
 #     description: "Random number"
@@ -23,6 +23,10 @@ runs:
       shell: bash
     - run: ${{ github.action_path }}/bye.sh
       shell: bash
+ 
+    - run: echo 1
+      shell: ${{ inputs.who-to-greet }}
+    
     - name: Commit and push if changed
       run: |-
         git add .
