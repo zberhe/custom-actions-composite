@@ -23,8 +23,8 @@ runs:
       shell: bash
     - run: ${{ github.action_path }}/bye.sh
       shell: bash
-    - run: echo 1
-      shell: echo "${{ inputs.who-to-greet }}
+    - run: echo "${{ inputs.who-to-greet }}
+      shell: bash
     
     - name: Commit and push if changed"
       run: |-
